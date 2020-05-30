@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: true
+  become_user: root
+  tasks:
+    - name: service ssh start
+      service:
+        name: ssh
+        state: started
+
+    
+

@@ -1,0 +1,5 @@
+#Change file ownership
+ansible -m file -a "dest=/tmp/testfile mode=777 owner=testuser" --become -K TestGroup
+
+#Delete a file from the TestGroup clients
+ansible -m file -a "dest=/tmp/testfile state=absent" --become -K TestGroup

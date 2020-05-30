@@ -1,0 +1,10 @@
+- hosts: testgroup
+  become: true
+  become_user: root
+  tasks: 
+    - name: run the script
+      script: /home/sometest.sh
+      when: test_var is undefined
+
+
+

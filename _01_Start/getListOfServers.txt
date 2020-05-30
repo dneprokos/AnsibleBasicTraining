@@ -1,0 +1,4 @@
+ansible --list-hosts webservers
+
+
+#returns list of hosts of webservers group

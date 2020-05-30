@@ -1,0 +1,1 @@
+ansible -m yum -a "name=tree state=absent" --become -K TestGroup

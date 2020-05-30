@@ -1,0 +1,7 @@
+#Change file with ansible 
+ansible -m file -a "dest=/etc/ansible/ansible.cfg mode=777 owner=test group=admin" TestGroup --become --become-method=sudo --become-user=root -K
+
+
+
+
+ 

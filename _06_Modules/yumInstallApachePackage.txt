@@ -1,0 +1,1 @@
+ansible -m yum -a "name=httpd state=present" --become -K TestGroup

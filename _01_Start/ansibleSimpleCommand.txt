@@ -1,0 +1,13 @@
+ansible -m command -a "uptime" dev
+
+
+
+#"ansible" - keyword to call ansible
+
+#"-m" - module
+
+#"command" - module name
+
+# "updatime" - OS Command
+
+# "dev" - Target server group 

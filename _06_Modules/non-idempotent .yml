@@ -1,0 +1,7 @@
+---
+- hosts: testhosts
+  become: true
+  become-user: root
+  tasks: 
+    -name: Non-idempotent approach with Shell Modules. Will add nameserver each time
+     shell: echo "nameserver 192.168.0.1" > /tmp/test.cong

@@ -1,0 +1,6 @@
+#Get environment variables
+ansible -m shell -a "set" TestGroup
+
+
+#The following command will not work: "ansible -m command -a "set" TestGroup", 
+#because command modules cannot use variables

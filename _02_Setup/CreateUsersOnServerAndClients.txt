@@ -1,0 +1,12 @@
+#Adds new user
+useradd ansible_test
+
+#Change password to just created user. Set to something simple for the first time, like "12345"
+passwd ansible_test
+
+#Get usernames in order to make sure user was created
+cut -d: -f1 /etc/passwd
+
+
+
+#########The same user should be created to all client you want to manage

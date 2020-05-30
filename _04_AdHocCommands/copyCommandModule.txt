@@ -1,0 +1,6 @@
+#copying
+ansible -m copy -a "src=/etc/hosts dest=/tmp/hosts" TestGroup --become -K
+
+
+#Add content to the client files
+ansible -m copy -a 'content="New test message\n" dest=/tmp/hosts' TestGroup --become -K

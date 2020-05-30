@@ -1,0 +1,29 @@
+---
+- hosts: TestHosts
+  become: true
+  become_user: root
+  tasks: 
+    - name: Mount the OS Media Driver
+      command: mount /dev/sr0 /mnt
+    - name: Copy the local repo file
+      copy: 
+         src: /home/teltovk/ansible/server.repo
+         dest: /etc/yum.repos.d
+    - name: Install VSFTPD package
+      yum:
+         name: VSFTPD
+         state: latest
+    - name: Install HTTPD package
+      yum: 
+         name: httpd
+         state: latest
+    - name: Start and enable the VSFTPD Service
+      service:
+          name: vsftpd
+          state: started
+          enabled: true
+    - name: Start and enable the HTTPD Service
+          service:
+              name: httpd
+              state: started
+              enabled: true

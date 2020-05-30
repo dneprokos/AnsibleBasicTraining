@@ -1,0 +1,9 @@
+---
+    - hosts: testhosts
+      become: true
+      become-user: root
+      tasks: 
+        -name: Idempotent approach with Copy Module. Will check if value exists before creation
+         copy:  
+            dest: /tmp/test2.cong
+            content: "nameserver 192.168.0.1"

@@ -1,0 +1,2 @@
+#Runs playbookfile. Please change <playbookfile.xml> to filename you want to run 
+ansible-play <playbookfile.xml> -K

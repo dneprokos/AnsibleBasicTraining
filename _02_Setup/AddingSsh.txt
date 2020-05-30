@@ -1,0 +1,18 @@
+#Generate a new key pair to server machine
+ssh-keygen -t rsa
+
+
+#Create ssh on client machines(User should be the same as for server machine)
+mkdir .ssh
+
+#Then restrict the permissions to that directory to just yourself with the command below.
+chmod 700 .ssh
+
+
+
+
+
+#Copy the public half of the key pair to your cloud server using the following command. Replace the user and server with your username and the server address you wish to use the key authentication on.
+ssh-copy-id -i ~/.ssh/id_rsa.pub user@server
+
+ssh-copy-id -i ~/.ssh/id_rsa.pub AMCS\teltovk@US6536NB
